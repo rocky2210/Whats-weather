@@ -13,7 +13,7 @@ body{
   align-items: center;
   justify-content:center;
   min-height: 100vh;
-  background: #0c0c0c;
+  background: #161623;
 }
 
 ::selection{
@@ -23,16 +23,21 @@ body{
 
 .mainbox{
   width: 300px;
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(225, 225, 225, 0.1);
+  overflow: hidden;
+  border-top: 1px solid rgba(225, 225, 225, 0.5);
+  border-left: 1px solid rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .mainbox header{
   display: flex;
   font-size: 21px;
   font-weight: 600;
-  color: #2e82f1;
+  color: #fff;
+  z-index: 1;
   padding: 16px 15px;
   align-items:center;
   border-bottom: 1px solid #404040;
@@ -92,7 +97,10 @@ header i{
 .input-part input{
   text-align: center;
   padding: 0 12px;
+  color: #fff;
   border: 2px solid #ccc;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(225, 225, 225, 0.1);
 }
 
 .input-part input:is(:focus, :valid){
@@ -107,7 +115,6 @@ header i{
   height: 1px;
   width: 100%;
   margin: 25px 0;
-  background: #ccc;
   position: relative;
   display: flex;
   align-items: center;
@@ -116,10 +123,8 @@ header i{
 
 .separator::before{
   content: "or";
-  color: #b3b3b3;
+  color: #bfbfbf;
   font-size: 19px;
-  padding: 0 15px;
-  background:#fff;
 }
 
 .input-part button{
@@ -145,6 +150,7 @@ header i{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #fff;
 }
 
 .mainbox.active .weatherbox{
@@ -191,7 +197,7 @@ header i{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border-top: 1px solid black;
+  border-top: 1px solid #bfbfbf;
 }
 
 .bottom-details .column{
@@ -203,15 +209,16 @@ header i{
 }
 
 .column i{
-  color: #2e9eee;
+  color: #fff;
   font-size: 40px;
 }
 
 .column.humidity{
-  border-left: 1px solid black;
+  border-left: 1px solid #fff;
 }
 .column .details{
   margin-left: 3px;
+
 }
 
 .details .temp, .humidity span{
